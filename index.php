@@ -34,10 +34,8 @@ foreach ($dataCollection->getCryptoCurrencies() as $cryptoCurrency) {
     echo "Low Price: " . $cryptoCurrency->getLowPrice() . PHP_EOL;
     echo "Volume: " . $cryptoCurrency->getVolume() . PHP_EOL;
     echo "Quote Volume: " . $cryptoCurrency->getQuoteVolume() . PHP_EOL;
-    $timestampOpen = (int)($cryptoCurrency->getOpenTime() / 1000);
-    echo "Open Time: " . date('Y-m-d H:i:s', $timestampOpen) . PHP_EOL;
-    $timestampClose = (int)($cryptoCurrency->getCloseTime() / 1000);
-    echo "Close Time: " . date('Y-m-d H:i:s', $timestampClose) . PHP_EOL;
+    echo "Open Time: " . $cryptoCurrency->getOpenTime() . PHP_EOL;
+    echo "Close Time: " . $cryptoCurrency->getCloseTime() . PHP_EOL;
     echo "Count: " . $cryptoCurrency->getCount() . PHP_EOL;
     echo "-------------------------------------------------------------" . PHP_EOL;
 }

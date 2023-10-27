@@ -140,14 +140,16 @@ class CryptoCurrency
         return $this->quoteVolume;
     }
 
-    public function getOpenTime(): int
+    public function getOpenTime(): string
     {
-        return $this->openTime;
+        $timestampOpen = (int)($this->openTime / 1000);
+        return date('Y-m-d H:i:s',$timestampOpen);
     }
 
-    public function getCloseTime(): int
+    public function getCloseTime(): string
     {
-        return $this->closeTime;
+        $timestampClose = (int)($this->closeTime / 1000);
+        return date('Y-m-d H:i:s',$timestampClose);
     }
 
     public function getCount(): int
