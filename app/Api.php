@@ -33,9 +33,21 @@ class Api
                         $data->symbol,
                         $data->priceChange,
                         $data->priceChangePercent,
-                        $data->weightedAvgPrice
-
-
+                        $data->weightedAvgPrice,
+                        $data->prevClosePrice,
+                        $data->lastQty,
+                        $data->bidPrice,
+                        $data->bidQty,
+                        $data->askPrice,
+                        $data->askQty,
+                        $data->openPrice,
+                        $data->highPrice,
+                        $data->lowPrice,
+                        $data->volume,
+                        $data->quoteVolume,
+                        $data->openTime,
+                        $data->closeTime,
+                        $data->count
                     );
                     $cryptoCurrenciesCollection->add($cryptoCurrency);
                 } else {
@@ -46,7 +58,7 @@ class Api
             }
         }
 
-        var_dump($cryptoCurrenciesCollection);die;
+        //var_dump($cryptoCurrenciesCollection);die;
         return $cryptoCurrenciesCollection;
     }
 }
